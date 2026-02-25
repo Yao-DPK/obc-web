@@ -77,7 +77,6 @@ export default function Page() {
               <div className={`video-container ${isLoading ? 'hidden' : ''}`}>
                 <video 
                   ref={videoRef}
-                  controls
                   className="video-player"
                   poster="/video-thumbnail.jpg"
                 >
