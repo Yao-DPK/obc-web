@@ -1,13 +1,24 @@
-//import './globals.css'
 
-export default function RootLayout({
+import Navbar from "../src/components/navbar/navbar"
+import Image from 'next/image'
+import "./globals.css"
+
+export default function HomeLayout({
     children,
   }: {
     children: React.ReactNode
   }) {
     return (
-      <html lang="en">
-        <body>{children}</body>
-      </html>
+      <>
+      
+        <html lang="en">
+          <body>
+            {/* Layout UI */}
+            {/* Place children where you want to render a page or nested layout */}
+            <main>{children}</main>
+          </body>
+        </html>
+      </>
+      
     )
   }

@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Arial', sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #ffffff;
+    
+  }
+
+  .custom-icon path, .custom-icon rect {
+    stroke: currentColor;
+  }
+
+  
+  /* App container */
+  .app {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #002116 0%, #002417 100%);
+    position: relative;
+  }
+  /* Main content */
+  .main-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 6rem 1.5rem 0;
+  }
+
+   
+  /* Footer */
+  .footer {
+    margin-top: 4rem;
+    text-align: center;
+    color: #9ca3af;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+    
+    .video-card-content {
+      padding: 1rem;
+    }
+    
+    .nav-links {
+      gap: 1rem;
+    }
+    
+    .logo-text {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .nav-links {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .play-button {
+      padding: 0.4rem 1rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (max-width: 576px) { }
+
+    /* Small devices (tablets) */
+    @media (min-width: 577px) and (max-width: 768px) { }
+
+    /* Medium devices (desktops) */
+    @media (min-width: 769px) and (max-width: 992px) {  }
+
+    /* Large devices (large desktops) */
+    @media (min-width: 993px) and (max-width: 1200px) { }
+
+    /* Extra large devices */
+    @media (min-width: 1201px) {  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #001E16;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #FAD141;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F0C044;
+  }
+  
+  /* Video player aspect ratio */
+  video {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Add to your existing globals.css */
+
+/* Better touch interactions */
+@media (max-width: 768px) {
+    body {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Prevent text size adjustment on orientation change */
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+  }
+  
+  /* Improve readability on small screens */
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+    
+    /* Ensure interactive elements are big enough */
+    button, 
+    a,
+    [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+  
+  /* Landscape mode on phones */
+  @media (max-width: 768px) and (orientation: landscape) {
+    .content {
+      margin-top: 80px;
+    }
+    
+    .content p {
+      font-size: clamp(1.2rem, 4vw, 2rem);
+    }
+  }
