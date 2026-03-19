@@ -1,24 +1,24 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-import Navbar from "../src/components/navbar/navbar"
-import Image from 'next/image'
-import "./globals.css"
+const inter = Inter({ subsets: ["latin"] });
 
-export default function HomeLayout({
-    children,
-  }: {
-    children: React.ReactNode
-  }) {
-    return (
-      <>
-      
-        <html lang="en">
-          <body>
-            {/* Layout UI */}
-            {/* Place children where you want to render a page or nested layout */}
-            <main>{children}</main>
-          </body>
-        </html>
-      </>
-      
-    )
-  }
+export const metadata: Metadata = {
+  title: "OBC Basket",
+  description: "Site officiel du club de basket OBC",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="fr">
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  );
+}

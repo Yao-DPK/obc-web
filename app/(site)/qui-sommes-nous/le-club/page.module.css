@@ -1,0 +1,324 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .page_title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #1a4d2e;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .page_title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #1a4d2e, #2a6e3a);
+    margin: 1rem auto;
+    border-radius: 2px;
+  }
+  
+  /* Stats */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .stat_card {
+    background: linear-gradient(135deg, #1a4d2e 0%, #2a6e3a 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .stat_value {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat_label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* Teams */
+  .teams {
+    margin-bottom: 4rem;
+  }
+  
+  .teams h2 {
+    color: #1a4d2e;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .teams_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .team_category {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+  
+  .team_category h3 {
+    color: #2a6e3a;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #2a6e3a;
+    font-size: 1.3rem;
+  }
+  
+  .team_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .team_list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+  }
+  
+  .team_list li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Facilities */
+  .facilities {
+    margin-bottom: 4rem;
+  }
+  
+  .facilities h2 {
+    color: #1a4d2e;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .facilities_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .facility_card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .facility_card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .facility_icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .facility_card h3 {
+    color: #1a4d2e;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .facility_card p {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Schedule */
+  .schedule {
+    margin-bottom: 4rem;
+  }
+  
+  .schedule h2 {
+    color: #1a4d2e;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .schedule_table {
+    overflow-x: auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+  
+  .schedule_table table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+  
+  .schedule_table th {
+    background: linear-gradient(135deg, #1a4d2e 0%, #2a6e3a 100%);
+    color: white;
+    padding: 1rem;
+    font-weight: 600;
+  }
+  
+  .schedule_table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    color: #666;
+  }
+  
+  .schedule_table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .schedule_table tr:hover td {
+    background-color: #f5f5f5;
+  }
+  
+  /* Staff */
+  .staff {
+    margin-bottom: 4rem;
+  }
+  
+  .staff h2 {
+    color: #1a4d2e;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .staff_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .staff_member {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+  
+  .staff_member h3 {
+    color: #1a4d2e;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .staff_role {
+    color: #2a6e3a;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .staff_member p:last-child {
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  /* Join CTA */
+  .join_cta {
+    background: linear-gradient(135deg, #1a4d2e 0%, #2a6e3a 100%);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .join_cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .join_cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta_buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .cta_primary {
+    background: white;
+    color: #1a4d2e;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+  }
+  
+  .cta_secondary {
+    background: transparent;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+  }
+  
+  .cta_primary:hover {
+    transform: scale(1.05);
+  }
+  
+  .cta_secondary:hover {
+    background: white;
+    color: #1a4d2e;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cta_buttons {
+      flex-direction: column;
+    }
+    
+    .cta_primary,
+    .cta_secondary {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .stats {
+      grid-template-columns: 1fr;
+    }
+  }

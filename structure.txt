@@ -1,0 +1,145 @@
+.
+├── app
+│   ├── globals.css
+│   ├── home
+│   ├── layout.tsx
+│   ├── page.module.css
+│   ├── page.tsx
+│   └── qui-sommes-nous
+│       ├── a-propos
+│       ├── le-club
+│       ├── page.module.css
+│       └── page.tsx
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── public
+│   ├── Fab.jpeg
+│   ├── Naya.mp4
+│   ├── OBC.jpeg
+│   ├── OBC-nobg.png
+│   └── svgs
+│       ├── close_icon.svg
+│       └── menu_icon.svg
+├── README.md
+├── src
+│   ├── components
+│   │   ├── icon-base
+│   │   ├── icons
+│   │   └── navbar
+│   └── types
+│       └── icon-type.ts
+├── structure.txt
+└── tsconfig.json
+
+13 directories, 20 files
+
+MAJ:
+.
+├── app
+│   ├── (auth)
+│   │   ├── connexion
+│   │   │   └── page.tsx
+│   │   ├── inscription
+│   │   │   └── page.tsx
+│   │   └── profil
+│   │       └── page.tsx
+│   ├── (site)
+│   │   ├── layout.tsx
+│   │   ├── page.tsx                    # ancien home
+│   │   ├── camp
+│   │   │   ├── page.tsx
+│   │   │   ├── ferme
+│   │   │   │   └── page.tsx
+│   │   │   └── ouvert
+│   │   │       └── page.tsx
+│   │   ├── categories
+│   │   │   ├── page.tsx
+│   │   │   ├── baby
+│   │   │   │   └── page.tsx
+│   │   │   ├── benjamins
+│   │   │   │   └── page.tsx
+│   │   │   ├── cadets
+│   │   │   │   └── page.tsx
+│   │   │   ├── espoirs
+│   │   │   │   └── page.tsx
+│   │   │   ├── juniors
+│   │   │   │   └── page.tsx
+│   │   │   ├── minimes
+│   │   │   │   └── page.tsx
+│   │   │   └── seniors
+│   │   │       └── page.tsx
+│   │   ├── communaute
+│   │   │   ├── page.tsx
+│   │   │   ├── basket-ecole
+│   │   │   │   └── page.tsx
+│   │   │   ├── benevole
+│   │   │   │   └── page.tsx
+│   │   │   └── partenaire
+│   │   │       └── page.tsx
+│   │   ├── contact
+│   │   │   ├── page.tsx
+│   │   │   ├── nous-joindre
+│   │   │   │   └── page.tsx
+│   │   │   └── reseaux
+│   │   │       └── page.tsx
+│   │   ├── inscription
+│   │   │   ├── page.tsx
+│   │   │   ├── adherer
+│   │   │   │   └── page.tsx
+│   │   │   └── paiement
+│   │   │       └── page.tsx
+│   │   ├── qui-sommes-nous
+│   │   │   ├── page.tsx
+│   │   │   ├── a-propos
+│   │   │   │   └── page.tsx
+│   │   │   └── le-club
+│   │   │       └── page.tsx
+│   │   ├── resultats
+│   │   │   ├── page.tsx
+│   │   │   ├── histoire
+│   │   │   │   └── page.tsx
+│   │   │   ├── matchs
+│   │   │   │   └── page.tsx
+│   │   │   └── scores
+│   │   │       └── page.tsx
+│   │   └── boutique
+│   │       └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.module.css
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── public
+│   ├── Fab.jpeg
+│   ├── Naya.mp4
+│   ├── OBC.jpeg
+│   ├── OBC-nobg.png
+│   └── svgs
+│       ├── close_icon.svg
+│       └── menu_icon.svg
+├── README.md
+├── src
+│   ├── components
+│   │   ├── icon-base
+│   │   ├── icons
+│   │   ├── layout
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Header.tsx
+│   │   │   └── MobileSidebar.tsx
+│   │   └── navbar
+│   ├── contexts
+│   │   └── ThemeContext.tsx
+│   ├── data
+│   │   └── mock
+│   │       ├── games.ts
+│   │       └── players.ts
+│   └── types
+│       ├── icon-type.ts
+│       ├── player.ts
+│       └── game.ts
+├── structure.txt
+└── tsconfig.json

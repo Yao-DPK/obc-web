@@ -1,0 +1,458 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(55, 179, 17, 0.479);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+  }
+  
+  .header.scrolled {
+    background-color: rgba(55, 179, 17, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* Logo */
+  .logo {
+    flex-shrink: 0;
+  }
+  
+  .logo_link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo_link:hover {
+    transform: scale(1.02);
+  }
+  
+  .logo_image {
+    width: auto;
+    height: 60px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
+  
+  .logo_text {
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: none; /* Caché sur mobile, affiché sur desktop si souhaité */
+  }
+  
+  .header.scrolled .logo_image {
+    height: 50px;
+  }
+  
+  /* Navigation desktop */
+  .nav_desktop {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Header actions */
+  .header_actions {
+  flex: 0 0 auto;  /* Ne grandit pas, ne rétrécit pas */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 120px;    /* Même largeur que le logo pour équilibrer */
+}
+
+  /* Bouton menu mobile (hamburger) */
+.mobile_menu_btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2001;
+  }
+  
+  .mobile_menu_btn span {
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Animation du hamburger vers X */
+  .mobile_menu_btn.open span:first-child {
+    opacity: 0;
+  }
+  
+  .mobile_menu_btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile_menu_btn.open span:last-child {
+    opacity: 0;
+  }
+  
+  /* Icônes */
+  .icon_btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .icon_btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  /* Menu utilisateur */
+  .user_menu_container {
+    position: relative;
+  }
+  
+  .user_btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 0.4rem 0.8rem 0.4rem 0.4rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .user_btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FAD141;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #001E16;
+    font-size: 1.2rem;
+  }
+  
+  .user_name {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  .arrow_up {
+    transform: rotate(180deg);
+  }
+  
+  .user_dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 220px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    animation: slideDown 0.3s ease;
+  }
+  
+  .dropdown_item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 0.95rem;
+  }
+  
+  .dropdown_item:hover {
+    background: rgba(55, 179, 17, 0.1);
+    color: #37B311;
+  }
+  
+  .dropdown_item svg {
+    color: #666;
+  }
+  
+  .dropdown_item:hover svg {
+    color: #37B311;
+  }
+  
+  /* Boutons auth */
+  .auth_btns {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .login_btn, .register_btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-size: 0.95rem;
+  }
+  
+  .login_btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  .login_btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .register_btn {
+    background-color: #FAD141;
+    color: #001E16;
+  }
+  
+  .register_btn:hover {
+    background-color: #ffdb6b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(250, 209, 65, 0.3);
+  }
+  
+
+
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: #001E16;
+  z-index: 2000;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+.mobile_menu_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.mobile_logo {
+  height: 40px;
+  width: auto;
+}
+
+.hamburger_btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2001;
+  }
+  
+  .hamburger_btn span {
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+/* Bouton fermeture (dans le menu mobile) - déjà existant, on le garde */
+.close_btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .close_btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+  }
+  
+  .close_btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: white;
+  }
+
+.mobile_auth {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.mobile_login, .mobile_register {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.mobile_login {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.mobile_login:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.mobile_register {
+  background: #FAD141;
+  color: #001E16;
+}
+
+.mobile_register:hover {
+  background: #ffdb6b;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Ajoute cette animation si tu veux un slide plutôt qu'un fade */
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  
+  /* Desktop large */
+  @media (min-width: 1200px) {
+    .logo_text {
+      display: block;
+    }
+  }
+  
+  /* Tablets and below */
+@media (max-width: 1710px) {
+    .nav_desktop {
+      display: none;
+    }
+  
+    .hamburger_btn {  /* Remplacé .mobile_menu_btn par .hamburger_btn */
+      display: flex;
+    }
+  
+    .auth_btns {
+      display: none;
+    }
+  
+    .user_btn .user_name {
+      display: none;
+    }
+  }
+
+
+  /* Mobile */
+@media (max-width: 768px) {
+    .header_container {
+      padding: 0.5rem 1rem;
+    }
+  
+    .logo_image {
+      height: 50px;
+    }
+  
+    .header.scrolled .logo_image {
+      height: 40px;
+    }
+  
+    .icon_btn {
+      display: none;
+    }
+  
+    .mobile_menu {
+      width: 100%;
+    }
+  }
+  
+  /* Petit mobile */
+  @media (max-width: 480px) {
+    .logo_image {
+      height: 40px;
+    }
+  
+    .mobile_menu {
+      width: 100%;
+      max-width: none;
+    }
+  
+    .mobile_menu_header {
+      padding: 1rem;
+    }
+  }
