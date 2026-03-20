@@ -1,14 +1,14 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background-color: rgba(55, 179, 17, 0.479);
-    backdrop-filter: blur(5px);
-    transition: all 0.3s ease;
-  }
-  
+  position: sticky;  /* Changé de fixed à sticky */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(55, 179, 17, 0.479);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
   .header.scrolled {
     background-color: rgba(55, 179, 17, 0.8);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -55,9 +55,9 @@
     display: none; /* Caché sur mobile, affiché sur desktop si souhaité */
   }
   
-  .header.scrolled .logo_image {
+/*   .header.scrolled .logo_image {
     height: 50px;
-  }
+  } */
   
   /* Navigation desktop */
   .nav_desktop {
@@ -72,7 +72,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: 120px;    /* Même largeur que le logo pour équilibrer */
+  margin-left: auto
 }
 
   /* Bouton menu mobile (hamburger) */
@@ -288,25 +288,27 @@
 }
 
 .hamburger_btn {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 24px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 2001;
-  }
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: white;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin-left: 0.5rem;
+}
   
-  .hamburger_btn span {
-    width: 100%;
-    height: 3px;
-    background: white;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-  }
+.hamburger_btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hamburger_btn svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
 
 /* Bouton fermeture (dans le menu mobile) - déjà existant, on le garde */
 .close_btn {
@@ -335,9 +337,11 @@
   }
 
 .mobile_auth {
-  padding: 1.5rem;
+  padding: 1rem;
+  padding-bottom: 5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: auto;
+  margin-bottom: auto;
 }
 
 .mobile_login, .mobile_register {
@@ -443,16 +447,23 @@
   
   /* Petit mobile */
   @media (max-width: 480px) {
+    .header_container {
+      padding: 0.5rem 1rem;
+    }
+  
     .logo_image {
+      height: 50px;
+    }
+  
+    .header.scrolled .logo_image {
       height: 40px;
+    }
+  
+    .icon_btn {
+      display: none;
     }
   
     .mobile_menu {
       width: 100%;
-      max-width: none;
-    }
-  
-    .mobile_menu_header {
-      padding: 1rem;
     }
   }

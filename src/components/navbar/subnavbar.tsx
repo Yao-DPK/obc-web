@@ -1,31 +1,48 @@
 "use client"
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Link from 'next/link';
-import styles from './navbar.module.css';
+import { usePathname } from 'next/navigation';
+import styles from './Subnavbar.module.css';
+import { navbar_items } from './navbar_data';
 
 type Props = {
-  submenu: Array<{ label: string; url?: string }>;
-  isVisible: boolean;
   parentLabel: string;
 };
 
-const SubNavbar: React.FC<Props> = ({ submenu, isVisible, parentLabel }) => {
-  if (!isVisible) return null;
+const SubNavbar: React.FC<Props> = ({ parentLabel }) => {
+  const pathname = usePathname();
+  const scrollRef = useRef<HTMLDivElement>(null);
+  
+  // Trouver le parent et son sous-menu
+  const parent = navbar_items.find(item => item.label === parentLabel);
+  const submenu = parent?.submenu || [];
+
+  if (submenu.length === 0) return null;
 
   return (
-    <div className={styles.sub_navbar}>
-      <div className={styles.sub_navbar_container}>
-        <h3 className={styles.sub_navbar_title}>{parentLabel}</h3>
-        <ul className={styles.sub_navbar_links}>
+    <div className={styles.subnavbar}>
+      <div className={styles.container}>
+        {/* Nom de la section parente avec séparateur */}
+        <div className={styles.parent_section}>
+          <span className={styles.parent_name}>{parentLabel}</span>
+          <div className={styles.separator}></div>
+        </div>
+
+        {/* Liens avec scroll horizontal */}
+        <div className={styles.links_wrapper} ref={scrollRef}>
           {submenu.map((item) => (
-            <li key={item.label}>
-              <Link href={item.url || '#'} className={styles.sub_navbar_link}>
-                {item.label}
-              </Link>
-            </li>
+            <Link
+              key={item.label}
+              href={item.url || '#'}
+              className={`${styles.link} ${
+                pathname === item.url ? styles.active : ''
+              }`}
+            >
+              {item.label}
+            </Link>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
