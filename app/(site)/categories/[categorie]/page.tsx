@@ -7,7 +7,7 @@ import Gallery from '../../../../src/components/ui/Gallery';
 // À remplacer par des données dynamiques plus tard
 const categoryData = categories;
 
-export default async function CategoriePage({ params }: { params: { categorie: string } }) {
+export default async function CategoriePage({ params }: { params: Promise<{ categorie: string }> }) {
     const { categorie } = await params;
   
     const data = categoryData.find(cat => cat.id === categorie);
