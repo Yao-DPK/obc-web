@@ -41,8 +41,7 @@ export const navbar_items: NavItem[] = [
       submenu: [
         { label: "Scores", url: "/resultats/scores"},
         { label: "Matchs à venir", url: "/resultats/matchs" },
-        { label: "Histoire", url: "/resultats/histoire" }
-      ]
+    ]
     },
     { 
       label: "Le Camp", 
@@ -56,15 +55,11 @@ export const navbar_items: NavItem[] = [
       label: "Communauté", 
       page: "/communaute",
       submenu: [
+        { label: "Actualités", url: "/communaute/actualites"},
         { label: "Devenir Bénévole", url: "/communaute/benevole"},
         { label: "Devenir Partenaire", url: "/communaute/partenaire"},
         { label: "Basket-Ecole", url: "/communaute/basket-ecole"}
       ]
-    },
-    { 
-      label: "Boutique", 
-      page: "/boutique",
-      url: "/boutique" 
     },
     { 
       label: "Contact", 
@@ -73,5 +68,10 @@ export const navbar_items: NavItem[] = [
         { label: "Nous Joindre", url: "/contact/nous-joindre" },
         { label: "Réseaux Sociaux", url: "/contact/reseaux" }
       ]
+    },
+    { 
+      label: "Boutique", 
+      page: "/boutique",
+      url: "/boutique" 
     },
   ]

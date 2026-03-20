@@ -1,0 +1,318 @@
+.container {
+    min-height: 100vh;
+  }
+  
+  /* Hero */
+  .hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    background-image: url('/images/camp/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero_overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 30, 22, 0.85), rgba(55, 179, 17, 0.6));
+  }
+  
+  .hero_content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 800px;
+    padding: 2rem;
+  }
+  
+  .hero_title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .hero_subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section_dark {
+    background: #f8fafc;
+  }
+  
+  .section_header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section_title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #001E16;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section_subtitle {
+    color: #666;
+  }
+  
+  /* Camps grid */
+  .camps_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .camp_card {
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+  }
+  
+  .camp_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .camp_card_premium {
+    background: linear-gradient(135deg, #001E16, #0a3a2a);
+    color: white;
+    border: none;
+  }
+  
+  .camp_card_premium .camp_title,
+  .camp_card_premium .camp_desc {
+    color: white;
+  }
+  
+  .camp_badge {
+    display: inline-block;
+    background: #37B311;
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .camp_badge_premium {
+    display: inline-block;
+    background: #FAD141;
+    color: #001E16;
+    padding: 0.25rem 1rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .camp_title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #001E16;
+    margin-bottom: 0.5rem;
+  }
+  
+  .camp_desc {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .camp_details {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #FAD141;
+  }
+  
+  .camp_card_premium .camp_details {
+    color: #FAD141;
+  }
+  
+  .camp_status {
+    margin-bottom: 1.5rem;
+  }
+  
+  .status_bar {
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+  
+  .status_fill {
+    height: 100%;
+    background: #37B311;
+    border-radius: 3px;
+    transition: width 0.3s;
+  }
+  
+  .status_fill_premium {
+    background: #FAD141;
+  }
+  
+  .status_text {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .camp_card_premium .status_text {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .camp_btn, .camp_btn_premium {
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .camp_btn {
+    background: #f0f0f0;
+    color: #001E16;
+  }
+  
+  .camp_btn:hover {
+    background: #37B311;
+    color: white;
+  }
+  
+  .camp_btn_premium {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .camp_btn_premium:hover {
+    background: #FAD141;
+    color: #001E16;
+  }
+  
+  /* Témoignages */
+  .testimonials {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #001E16, #0a3a2a);
+    color: white;
+    text-align: center;
+  }
+  
+  .testimonials .section_title {
+    color: white;
+  }
+  
+  .testimonials_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+  }
+  
+  .testimonial_card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 24px;
+  }
+  
+  .testimonial_avatar {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial_text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .testimonial_author {
+    font-weight: 600;
+    color: #FAD141;
+  }
+  
+  /* CTA */
+  .cta {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: #FAD141;
+    color: #001E16;
+  }
+  
+  .cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta p {
+    margin-bottom: 2rem;
+  }
+  
+  .btn_primary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #001E16;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .btn_primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .camps_grid,
+    .testimonials_grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero_title {
+      font-size: 2rem;
+    }
+    
+    .section {
+      padding: 3rem 1rem;
+    }
+    
+    .camp_details {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }

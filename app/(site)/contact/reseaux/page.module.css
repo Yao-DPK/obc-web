@@ -1,0 +1,324 @@
+.container {
+    min-height: 100vh;
+  }
+  
+  /* Hero */
+  .hero {
+    position: relative;
+    height: 40vh;
+    min-height: 350px;
+    background-image: url('/images/contact/social-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero_overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 30, 22, 0.85), rgba(55, 179, 17, 0.6));
+  }
+  
+  .hero_content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 800px;
+    padding: 2rem;
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .hero_title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .hero_subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* Grille des réseaux */
+  .social_grid {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .social_card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: white;
+    padding: 1.2rem 1.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .social_card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #37B311;
+  }
+  
+  .social_icon {
+    font-size: 2.5rem;
+    width: 60px;
+    text-align: center;
+  }
+  
+  .social_info {
+    flex: 1;
+  }
+  
+  .social_name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #001E16;
+    margin-bottom: 0.25rem;
+  }
+  
+  .social_username {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+  }
+  
+  .social_followers {
+    font-size: 0.8rem;
+    color: #37B311;
+    font-weight: 500;
+  }
+  
+  .social_link {
+    color: #37B311;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+  }
+  
+  .social_card:hover .social_link {
+    transform: translateX(5px);
+    color: #FAD141;
+  }
+  
+  /* Instagram feed */
+  .instagram_feed {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+  
+  .feed_title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #001E16;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .feed_title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #FAD141, #37B311);
+    border-radius: 2px;
+  }
+  
+  .feed_grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .feed_item {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #f0f0f0, #e5e5e5);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .feed_item:hover {
+    transform: scale(1.05);
+  }
+  
+  .feed_placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #9ca3af;
+  }
+  
+  .feed_cta {
+    text-align: center;
+  }
+  
+  .instagram_btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .instagram_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Newsletter */
+  .newsletter {
+    background: linear-gradient(135deg, #001E16, #0a3a2a);
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .newsletter_title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter_text {
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+  
+  .newsletter_form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .newsletter_input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .newsletter_btn {
+    padding: 1rem 2rem;
+    background: #FAD141;
+    color: #001E16;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .newsletter_btn:hover {
+    background: #ffdb6b;
+    transform: translateY(-2px);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .feed_grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 30vh;
+      min-height: 250px;
+    }
+    
+    .hero_title {
+      font-size: 2rem;
+    }
+    
+    .hero_subtitle {
+      font-size: 1rem;
+    }
+    
+    .social_card {
+      padding: 1rem;
+    }
+    
+    .social_icon {
+      font-size: 2rem;
+      width: 50px;
+    }
+    
+    .social_name {
+      font-size: 1rem;
+    }
+    
+    .feed_grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .newsletter {
+      padding: 3rem 1rem;
+    }
+    
+    .newsletter_title {
+      font-size: 1.5rem;
+    }
+    
+    .newsletter_form {
+      flex-direction: column;
+    }
+    
+    .newsletter_btn {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero_title {
+      font-size: 1.6rem;
+    }
+    
+    .feed_grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .social_link {
+      display: none;
+    }
+  }

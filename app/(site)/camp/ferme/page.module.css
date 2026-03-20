@@ -1,0 +1,513 @@
+.container {
+    min-height: 100vh;
+  }
+  
+  /* Hero */
+  .hero {
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    background-image: url('/images/camp/ferme-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero_overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 30, 22, 0.9), rgba(0, 0, 0, 0.7));
+  }
+  
+  .hero_content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 800px;
+    padding: 2rem;
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .hero_badge {
+    display: inline-block;
+    background: #FAD141;
+    color: #001E16;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .hero_title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .hero_subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* Infos grid */
+  .info_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: -2rem auto 3rem;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .info_card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .info_card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .info_icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info_card h3 {
+    font-size: 1rem;
+    color: #FAD141;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info_card p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #001E16;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section_title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #001E16;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section_title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #FAD141;
+  }
+  
+  /* Description */
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+  }
+  
+  /* Programme */
+  .schedule {
+    background: #f8fafc;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .schedule_item {
+    display: flex;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .schedule_item:last-child {
+    border-bottom: none;
+  }
+  
+  .schedule_time {
+    width: 120px;
+    font-weight: 700;
+    color: #FAD141;
+  }
+  
+  .schedule_activity {
+    flex: 1;
+    color: #2d3748;
+  }
+  
+  /* Hébergement */
+  .accommodation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .accommodation_card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s;
+  }
+  
+  .accommodation_card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .accommodation_icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .accommodation_card h3 {
+    font-size: 1.1rem;
+    color: #001E16;
+    margin-bottom: 0.5rem;
+  }
+  
+  .accommodation_card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Coaches */
+  .coaches_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .coach_card {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .coach_card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .coach_avatar {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #FAD141, #37B311);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 auto 1rem;
+  }
+  
+  .coach_card h3 {
+    font-size: 1.2rem;
+    color: #001E16;
+    margin-bottom: 0.25rem;
+  }
+  
+  .coach_card p {
+    color: #FAD141;
+    font-weight: 500;
+  }
+  
+  /* Inclus */
+  .includes_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .includes_item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 12px;
+  }
+  
+  .includes_check {
+    font-size: 1.2rem;
+  }
+  
+  /* Prérequis */
+  .prerequis_section {
+    background: linear-gradient(135deg, #001E16, #0a3a2a);
+    border-radius: 30px;
+    color: white;
+    margin: 2rem auto;
+    padding: 3rem 2rem;
+  }
+  
+  .prerequis_section .section_title {
+    color: white;
+  }
+  
+  .prerequis_section .section_title::after {
+    background: #FAD141;
+  }
+  
+  .prerequis_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .prerequis_card {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .prerequis_icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .prerequis_card h3 {
+    font-size: 1.1rem;
+    color: #FAD141;
+    margin-bottom: 0.5rem;
+  }
+  
+  .prerequis_card p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+  
+  /* Galerie */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .gallery_item {
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .gallery_item:hover {
+    transform: scale(1.02);
+  }
+  
+  .gallery_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* CTA */
+  .cta {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #FAD141, #ffdb6b);
+    border-radius: 30px;
+    margin: 2rem auto 4rem;
+    max-width: 800px;
+  }
+  
+  .cta h2 {
+    font-size: 2rem;
+    color: #001E16;
+    margin-bottom: 1rem;
+  }
+  
+  .cta p {
+    color: #001E16;
+    margin-bottom: 1rem;
+  }
+  
+  .status_warning {
+    margin: 1rem 0;
+  }
+  
+  .status_limited {
+    display: inline-block;
+    background: #001E16;
+    color: #FAD141;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+  
+  .status_full {
+    display: inline-block;
+    background: #dc2626;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+  
+  .cta_buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+  
+  .btn_primary, .btn_secondary {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+  }
+  
+  .btn_primary {
+    background: #001E16;
+    color: #FAD141;
+  }
+  
+  .btn_primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn_secondary {
+    background: transparent;
+    color: #001E16;
+    border: 2px solid #001E16;
+  }
+  
+  .btn_secondary:hover {
+    background: #001E16;
+    color: #FAD141;
+    transform: translateY(-2px);
+  }
+  
+  .deadline {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .info_grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .accommodation,
+    .prerequis_grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 50vh;
+      min-height: 400px;
+    }
+    
+    .hero_title {
+      font-size: 2rem;
+    }
+    
+    .info_grid {
+      grid-template-columns: 1fr;
+      margin-top: -1rem;
+    }
+    
+    .section {
+      padding: 2rem 1rem;
+    }
+    
+    .schedule_item {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .schedule_time {
+      width: auto;
+      margin-bottom: 0.25rem;
+    }
+    
+    .accommodation,
+    .prerequis_grid,
+    .includes_grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta_buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .btn_primary, .btn_secondary {
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero_title {
+      font-size: 1.6rem;
+    }
+    
+    .section_title {
+      font-size: 1.5rem;
+    }
+    
+    .coaches_grid {
+      grid-template-columns: 1fr;
+    }
+  }

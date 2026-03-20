@@ -1,0 +1,432 @@
+.container {
+    min-height: 100vh;
+  }
+  
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    height: 40vh;
+    min-height: 350px;
+    background-image: url('/images/resultats/matchs-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero_overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 30, 22, 0.85), rgba(55, 179, 17, 0.6));
+  }
+  
+  .hero_content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 800px;
+    padding: 2rem;
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .hero_title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .hero_subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* ===== FILTRES ===== */
+  .filters {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 90px;
+    z-index: 50;
+  }
+  
+  .categories_filter {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .filter_btn {
+    padding: 0.5rem 1.2rem;
+    background: transparent;
+    border: 1px solid #e5e7eb;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #4a5568;
+  }
+  
+  .filter_btn:hover {
+    border-color: #37B311;
+    color: #37B311;
+  }
+  
+  .filter_btn_active {
+    background: #37B311;
+    border-color: #37B311;
+    color: white;
+  }
+  
+  /* ===== CALENDRIER ===== */
+  .calendar {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
+  
+  .matchs_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .match_card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .match_card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .match_date_box {
+    background: linear-gradient(135deg, #FAD141, #ffdb6b);
+    border-radius: 16px;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    min-width: 70px;
+  }
+  
+  .match_day {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #001E16;
+    line-height: 1;
+  }
+  
+  .match_month {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #001E16;
+    font-weight: 600;
+  }
+  
+  .match_info {
+    flex: 1;
+  }
+  
+  .match_opponent {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #001E16;
+    margin-bottom: 0.5rem;
+  }
+  
+  .match_details {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+  
+  .match_time {
+    color: #37B311;
+    font-weight: 500;
+  }
+  
+  .match_location {
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .location_home {
+    background: #37B31110;
+    color: #37B311;
+  }
+  
+  .location_away {
+    background: #FAD14110;
+    color: #FAD141;
+  }
+  
+  .match_category {
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    background: rgba(250, 209, 65, 0.1);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #FAD141;
+  }
+  
+  .match_actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .calendar_btn, .notify_btn {
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+  }
+  
+  .calendar_btn {
+    background: #f0f0f0;
+    color: #4a5568;
+  }
+  
+  .calendar_btn:hover {
+    background: #37B311;
+    color: white;
+  }
+  
+  .notify_btn {
+    background: #FAD141;
+    color: #001E16;
+  }
+  
+  .notify_btn:hover {
+    background: #ffdb6b;
+    transform: translateY(-2px);
+  }
+  
+  /* ===== VUE MENSUELLE ===== */
+  .monthly_view {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+  }
+  
+  .monthly_title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #001E16;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .monthly_title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #FAD141, #37B311);
+    border-radius: 2px;
+  }
+  
+  .monthly_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .month_card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+  }
+  
+  .month_name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #FAD141;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+  }
+  
+  .month_matchs {
+    list-style: none;
+  }
+  
+  .month_matchs li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .month_matchs li:last-child {
+    border-bottom: none;
+  }
+  
+  .month_date {
+    font-weight: 700;
+    color: #37B311;
+    min-width: 30px;
+  }
+  
+  .month_opponent {
+    flex: 1;
+    color: #001E16;
+    font-weight: 500;
+  }
+  
+  .month_category {
+    font-size: 0.7rem;
+    color: #FAD141;
+    background: rgba(250, 209, 65, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 12px;
+  }
+  
+  .month_empty {
+    color: #9ca3af;
+    text-align: center;
+    padding: 1rem;
+    font-style: italic;
+  }
+  
+  /* ===== ÉTAT VIDE ===== */
+  .no_matchs {
+    text-align: center;
+    padding: 4rem;
+    background: #f8fafc;
+    border-radius: 20px;
+  }
+  
+  .no_matchs_icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .no_matchs h3 {
+    font-size: 1.5rem;
+    color: #001E16;
+    margin-bottom: 0.5rem;
+  }
+  
+  .no_matchs p {
+    color: #666;
+  }
+  
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .monthly_grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 30vh;
+      min-height: 250px;
+    }
+    
+    .hero_title {
+      font-size: 2rem;
+    }
+    
+    .hero_subtitle {
+      font-size: 1rem;
+    }
+    
+    .match_card {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+    
+    .match_date_box {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      min-width: auto;
+      padding: 0.5rem 1rem;
+    }
+    
+    .match_day {
+      font-size: 1.2rem;
+    }
+    
+    .match_actions {
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 0.5rem;
+    }
+    
+    .monthly_grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .categories_filter {
+      padding: 0.75rem 1rem;
+    }
+    
+    .filter_btn {
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero_title {
+      font-size: 1.6rem;
+    }
+    
+    .match_opponent {
+      font-size: 1rem;
+    }
+    
+    .match_details {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    
+    .match_location {
+      align-self: flex-start;
+    }
+    
+    .calendar_btn, .notify_btn {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.7rem;
+    }
+  }

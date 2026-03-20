@@ -1,0 +1,409 @@
+.container {
+    min-height: 100vh;
+  }
+  
+  /* Hero */
+  .hero {
+    position: relative;
+    height: 40vh;
+    min-height: 350px;
+    background-image: url('/images/communaute/benevole-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero_overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 30, 22, 0.85), rgba(55, 179, 17, 0.6));
+  }
+  
+  .hero_content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 800px;
+    padding: 2rem;
+  }
+  
+  .hero_title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .hero_subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section_light {
+    background: #f8fafc;
+    border-radius: 30px;
+    margin: 2rem auto;
+  }
+  
+  .section_title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #001E16;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .section_title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #FAD141, #37B311);
+    border-radius: 2px;
+  }
+  
+  /* Missions grid */
+  .missions_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .mission_card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    border: 1px solid #eee;
+  }
+  
+  .mission_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .mission_icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mission_card h3 {
+    font-size: 1.2rem;
+    color: #37B311;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mission_card p {
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Avantages */
+  .avantages_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .avantage_card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    transition: transform 0.3s;
+  }
+  
+  .avantage_card:hover {
+    transform: translateX(5px);
+  }
+  
+  .avantage_check {
+    width: 28px;
+    height: 28px;
+    background: #37B311;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  /* Formules partenaires */
+  .formules_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .formule_card {
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    position: relative;
+    border: 1px solid #eee;
+  }
+  
+  .formule_card_popular {
+    transform: scale(1.02);
+    border: 2px solid #FAD141;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .popular_badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FAD141;
+    color: #001E16;
+    padding: 0.25rem 1rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .formule_name {
+    font-size: 1.3rem;
+    color: #001E16;
+    margin-bottom: 1rem;
+  }
+  
+  .formule_price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #37B311;
+    margin-bottom: 1.5rem;
+  }
+  
+  .formule_price span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #666;
+  }
+  
+  .formule_benefits {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  
+  .formule_benefits li {
+    padding: 0.5rem 0;
+    color: #666;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .formule_btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #001E16;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .formule_btn:hover {
+    background: #37B311;
+    transform: translateY(-2px);
+  }
+  
+  /* Objectifs basket-école */
+  .objectifs_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .objectif_card {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .objectif_card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .objectif_icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Tranches d'âge */
+  .tranches_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .tranche_card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+  }
+  
+  .tranche_card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tranche_name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FAD141;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tranche_age {
+    font-weight: 600;
+    color: #37B311;
+    margin-bottom: 1rem;
+  }
+  
+  .tranche_horaire, .tranche_coach {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* CTA */
+  .cta {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #001E16, #37B311);
+    margin: 2rem auto 4rem;
+    border-radius: 30px;
+    max-width: 800px;
+  }
+  
+  .cta h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .cta p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+  }
+  
+  .cta_buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .btn_primary, .btn_secondary {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+  }
+  
+  .btn_primary {
+    background: #FAD141;
+    color: #001E16;
+  }
+  
+  .btn_primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(250, 209, 65, 0.3);
+  }
+  
+  .btn_secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .btn_secondary:hover {
+    background: white;
+    color: #001E16;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .formules_grid,
+    .objectifs_grid,
+    .tranches_grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero_title {
+      font-size: 1.8rem;
+    }
+    
+    .section {
+      padding: 2rem 1rem;
+    }
+    
+    .section_title {
+      font-size: 1.5rem;
+    }
+    
+    .missions_grid,
+    .formules_grid,
+    .objectifs_grid,
+    .tranches_grid,
+    .avantages_grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .formule_card_popular {
+      transform: scale(1);
+    }
+    
+    .cta {
+      margin: 2rem 1rem;
+      padding: 2rem 1rem;
+    }
+    
+    .cta h2 {
+      font-size: 1.5rem;
+    }
+    
+    .cta_buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .btn_primary, .btn_secondary {
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+    }
+  }
