@@ -1,0 +1,328 @@
+.gallery {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Navigation flèches */
+  .nav_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .gallery:hover .nav_arrow {
+    opacity: 1;
+  }
+  
+  .nav_arrow:hover {
+    background: rgba(250, 209, 65, 0.9);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .nav_prev {
+    left: 20px;
+  }
+  
+  .nav_next {
+    right: 20px;
+  }
+  
+  /* Grille de miniatures */
+  .thumbnail_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .thumbnail_item {
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    aspect-ratio: 4/3;
+  }
+  
+  .thumbnail_item:hover {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+  
+  .thumbnail_item.active {
+    opacity: 1;
+    ring: 2px solid #FAD141;
+    box-shadow: 0 0 0 2px #FAD141;
+  }
+  
+  .thumbnail_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Image principale */
+  .main_image_container {
+    position: relative;
+    margin-bottom: 1.5rem;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f0f0f0;
+    cursor: pointer;
+    aspect-ratio: 16/9;
+  }
+  
+  .main_image_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .main_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .main_image_wrapper:hover .main_image {
+    transform: scale(1.05);
+  }
+  
+  .main_image_overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+  }
+  
+  .main_image_overlay svg {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .main_image_overlay span {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .main_image_wrapper:hover .main_image_overlay {
+    opacity: 1;
+  }
+  
+  /* Pagination dots */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  
+  .pagination_dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+  
+  .pagination_dot:hover {
+    background: #FAD141;
+    transform: scale(1.2);
+  }
+  
+  .pagination_dot_active {
+    background: #FAD141;
+    width: 24px;
+    border-radius: 12px;
+  }
+  
+  /* Compteur */
+  .counter {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  /* ===== LIGHTBOX ===== */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .lightbox_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 2001;
+  }
+  
+  .lightbox_close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+  }
+  
+  .lightbox_nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 2001;
+  }
+  
+  .lightbox_nav:hover {
+    background: rgba(250, 209, 65, 0.8);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .lightbox_prev {
+    left: 20px;
+  }
+  
+  .lightbox_next {
+    right: 20px;
+  }
+  
+  .lightbox_content {
+    max-width: 90vw;
+    max-height: 90vh;
+    cursor: pointer;
+  }
+  
+  .lightbox_image {
+    width: auto;
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  .lightbox_counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    color: white;
+    font-size: 0.9rem;
+    z-index: 2001;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .nav_arrow {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .thumbnail_grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+    }
+    
+    .thumbnail_item {
+      border-radius: 8px;
+    }
+    
+    .lightbox_nav {
+      width: 44px;
+      height: 44px;
+    }
+    
+    .lightbox_close {
+      width: 40px;
+      height: 40px;
+      top: 10px;
+      right: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .thumbnail_grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+    
+    .pagination_dot {
+      width: 8px;
+      height: 8px;
+    }
+    
+    .pagination_dot_active {
+      width: 20px;
+    }
+    
+    .counter {
+      font-size: 0.8rem;
+    }
+  }
